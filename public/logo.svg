@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="2400" height="2739.55" viewBox="139.4 90.071 61.2 69.859"
+     color-interpolation-filters="sRGB">
+    <g transform="translate(140 90.67)" class="imagesvg isNoFont">
+        <path class="image-rect" fill="none" d="M0 0h60v68.659H0z"/>
+        <svg width="60" height="68.659" class="image-svg-svg primary" style="overflow:visible">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.845 193.21">
+                <path fill="none" pointer-events="none" d="M0 0h168.845v193.21H0z"/>
+                <path d="M104.422 48.345h-95l40-40h15z" class="st8" opacity=".8"/>
+                <path d="M64.422 8.345v140l40 40v-140zm-55 40v140h40v-180zm110 140v-180h40v140z" class="st8"
+                      opacity=".8"/>
+                <path d="M64.422 148.345h95l-40 40h-15z" class="st8" opacity=".8"/>
+            </svg>
+        </svg>
+    </g>
+</svg>
