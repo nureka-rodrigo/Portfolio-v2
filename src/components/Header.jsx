@@ -2,8 +2,10 @@ import {IoMdClose} from "react-icons/io";
 import {IoMenu} from "react-icons/io5";
 import {Dialog, Popover} from "@headlessui/react";
 import {useContext, useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
 import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
+import {Link, useLocation} from "react-router-dom";
 
 const NavItems = [
   {
@@ -22,7 +24,8 @@ const NavItems = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const {currentTheme} = useContext(ThemeContext)
+  const { currentTheme } = useContext(ThemeContext);
+  const location = useLocation();
 
   return (
     <>
@@ -32,13 +35,13 @@ const Header = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <img
                 className={`h-10 w-auto transition duration-500 ${currentTheme === "dark" ? "filter invert" : ""}`}
                 src="/logo.svg"
                 alt="Brand"
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -51,13 +54,17 @@ const Header = () => {
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             {NavItems.map((navItem, index) => (
-              <a
+              <Link
                 key={index}
-                href={navItem.link}
-                className={`text-sm font-semibold leading-6 hover:text-yellow-600 dark:hover:text-yellow-500 text-gray-900 dark:text-gray-300 transition duration-500`}
+                to={navItem.link}
+                className={`text-sm font-semibold leading-6 transition duration-500 ${
+                  location.pathname === navItem.link
+                    ? "text-yellow-600 dark:text-yellow-500 font-bold"
+                    : "text-gray-900 dark:text-gray-300"
+                } hover:text-yellow-500 dark:hover:text-yellow-600`}
               >
                 {navItem.text}
-              </a>
+              </Link>
             ))}
           </Popover.Group>
 
@@ -65,47 +72,68 @@ const Header = () => {
             <ThemeButton/>
           </div>
         </nav>
-        <Dialog
-          as="div"
-          className="lg:hidden"
-          open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
-        >
-          <div className="fixed inset-0 z-10 bg-black bg-opacity-50"/>
-          <Dialog.Panel
-            className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition duration-500">
-            <div className="flex items-center justify-between">
-              <a href="/" className="-m-1.5 p-1.5">
-                <img className={`h-10 w-auto transition duration-500 ${currentTheme === "dark" ? "filter invert" : ""}`} src="/logo.svg" alt=""/>
-              </a>
-              <button
-                type="button"
-                className="rounded-md text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <Dialog
+              as="div"
+              className="lg:hidden"
+              open={mobileMenuOpen}
+              onClose={() => setMobileMenuOpen(false)}
+            >
+              <motion.div
+                className="fixed inset-0 z-10 bg-black bg-opacity-50"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+              <Dialog.Panel as={motion.div}
+                className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.3 }}
               >
-                <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-500"/>
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {NavItems.map((navItem, index) => (
-                    <a
-                      key={index}
-                      href={navItem.link}
-                      className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500 transition duration-500`}
-                    >
-                      {navItem.text}
-                    </a>
-                  ))}
+                <div className="flex items-center justify-between">
+                  <Link to="/" className="-m-1.5 p-1.5">
+                    <img className={`h-10 w-auto transition duration-500 ${currentTheme === "dark" ? "filter invert" : ""}`}
+                         src="/logo.svg" alt=""/>
+                  </Link>
+                  <button
+                    type="button"
+                    className="rounded-md text-gray-700"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-500"/>
+                  </button>
                 </div>
-                <div className="flex items-center justify-center py-5">
-                  <ThemeButton/>
+                <div className="mt-6 flow-root">
+                  <div className="-my-6 divide-y divide-gray-500/10">
+                    <div className="space-y-2 py-6">
+                      {NavItems.map((navItem, index) => (
+                        <Link
+                          key={index}
+                          to={navItem.link}
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-500 ${
+                            location.pathname === navItem.link
+                              ? "text-yellow-600 dark:text-yellow-500 font-bold"
+                              : "text-gray-900 dark:text-gray-300"
+                          } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {navItem.text}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center py-5">
+                      <ThemeButton/>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </Dialog.Panel>
-        </Dialog>
+              </Dialog.Panel>
+            </Dialog>
+          )}
+        </AnimatePresence>
       </header>
     </>
   );
