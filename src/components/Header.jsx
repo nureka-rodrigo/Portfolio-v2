@@ -37,7 +37,9 @@ const Header = () => {
 
   return (
     <>
-      <header className={`transition duration-300 ${mobileMenuOpen ? "bg-opacity-50" : ""}`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 bg-gray-100 dark:bg-neutral-950 transition duration-300 ${mobileMenuOpen ? "bg-opacity-50" : ""}`}
+      >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8"
           aria-label="Global"
@@ -57,7 +59,10 @@ const Header = () => {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <IoMenu className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300" aria-hidden="true"/>
+              <IoMenu
+                className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -77,7 +82,7 @@ const Header = () => {
           </Popover.Group>
 
           <div className="pl-6 pr-2 hidden lg:block">
-            <ThemeButton/>
+            <ThemeButton />
           </div>
         </nav>
         <AnimatePresence>
@@ -95,7 +100,8 @@ const Header = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               />
-              <Dialog.Panel as={motion.div}
+              <Dialog.Panel
+                as={motion.div}
                 className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
@@ -104,15 +110,18 @@ const Header = () => {
               >
                 <div className="flex items-center justify-between">
                   <Link to="/" className="-m-1.5 p-1.5">
-                    <img className={`h-10 w-auto transition duration-300 ${currentTheme === "dark" ? "filter invert" : ""}`}
-                         src="/logo.svg" alt=""/>
+                    <img
+                      className={`h-10 w-auto transition duration-300 ${currentTheme === "dark" ? "filter invert" : ""}`}
+                      src="/logo.svg"
+                      alt=""
+                    />
                   </Link>
                   <button
                     type="button"
                     className="rounded-md text-gray-700"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"/>
+                    <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300" />
                   </button>
                 </div>
                 <div className="mt-6 flow-root">
@@ -134,7 +143,7 @@ const Header = () => {
                       ))}
                     </div>
                     <div className="flex items-center justify-center py-5">
-                      <ThemeButton/>
+                      <ThemeButton />
                     </div>
                   </div>
                 </div>

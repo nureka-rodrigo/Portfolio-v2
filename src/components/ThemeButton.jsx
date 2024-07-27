@@ -14,9 +14,9 @@ const ThemeButton = () => {
         }
       >
         {currentTheme === "light" ? (
-          <FaSun className="h-full w-auto"/>
+          <FaSun className="h-full w-auto" />
         ) : (
-          <FaMoon className="text-white h-4 w-auto"/>
+          <FaMoon className="text-white h-4 w-auto" />
         )}
       </button>
     </>
