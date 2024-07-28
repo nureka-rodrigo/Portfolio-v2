@@ -18,7 +18,6 @@ const Header = () => {
       >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8"
-          aria-label="Global"
         >
           <div className="flex lg:flex-1">
             <ScrollLink to="home" smooth={true} duration={500} className="-m-1.5 p-1.5 cursor-pointer">
@@ -48,11 +47,7 @@ const Header = () => {
                 to={navItem.link}
                 smooth={true}
                 duration={500}
-                className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
-                  location.pathname === navItem.link
-                    ? "text-yellow-600 dark:text-yellow-500 font-bold"
-                    : "text-gray-900 dark:text-gray-300"
-                } hover:text-yellow-500 dark:hover:text-yellow-600`}
+                className="text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
               >
                 {navItem.text}
               </ScrollLink>
