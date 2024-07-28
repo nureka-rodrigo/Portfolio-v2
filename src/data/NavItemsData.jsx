@@ -1,22 +1,22 @@
 export const NavItemsData = [
   {
     text: "Home",
-    link: "/",
+    link: "home",
   },
   {
     text: "About",
-    link: "#about",
+    link: "about",
   },
   {
     text: "Experience",
-    link: "#experience",
+    link: "experience",
   },
   {
     text: "Projects",
-    link: "#projects",
+    link: "projects",
   },
   {
     text: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ];

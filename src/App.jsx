@@ -15,9 +15,21 @@ function App() {
           <Header />
           {/* Content */}
           <div className="container py-10 max-w-7xl mx-auto px-4">
-            <Experience />
-            <Projects />
-            <Contact />
+            <section id="home">
+              <h1 className="text-4xl font-bold mb-8">Home</h1>
+            </section>
+            <section id="about">
+              <h1 className="text-4xl font-bold mb-8">About</h1>
+            </section>
+            <section id="experience">
+              <Experience />
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
           </div>
           <Footer />
         </div>

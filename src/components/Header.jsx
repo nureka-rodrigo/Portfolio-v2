@@ -4,13 +4,12 @@ import {AnimatePresence, motion} from "framer-motion";
 import {useContext, useState} from "react";
 import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
-import {Link, useLocation} from "react-router-dom";
+import {Link as ScrollLink} from "react-scroll";
 import {NavItemsData} from "../data/NavItemsData.jsx";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { currentTheme } = useContext(ThemeContext);
-  const location = useLocation();
 
   return (
     <>
@@ -22,13 +21,13 @@ const Header = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <Link to="/" className="-m-1.5 p-1.5">
+            <ScrollLink to="home" smooth={true} duration={500} className="-m-1.5 p-1.5 cursor-pointer">
               <img
                 className={`h-10 w-auto transition duration-300 ${currentTheme === "dark" ? "filter invert" : ""}`}
                 src="/logo.svg"
                 alt="Brand"
               />
-            </Link>
+            </ScrollLink>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -44,17 +43,19 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {NavItemsData.map((navItem, index) => (
-              <Link
+              <ScrollLink
                 key={index}
                 to={navItem.link}
-                className={`text-sm font-semibold leading-6 transition duration-300 ${
+                smooth={true}
+                duration={500}
+                className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
                   location.pathname === navItem.link
                     ? "text-yellow-600 dark:text-yellow-500 font-bold"
                     : "text-gray-900 dark:text-gray-300"
                 } hover:text-yellow-500 dark:hover:text-yellow-600`}
               >
                 {navItem.text}
-              </Link>
+              </ScrollLink>
             ))}
           </div>
 
@@ -81,13 +82,13 @@ const Header = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="flex items-center justify-between">
-                  <Link to="/" className="-m-1.5 p-1.5">
+                  <ScrollLink to="home" smooth={true} duration={500} className="-m-1.5 p-1.5 cursor-pointer">
                     <img
                       className={`h-10 w-auto transition duration-300 ${currentTheme === "dark" ? "filter invert" : ""}`}
                       src="/logo.svg"
                       alt=""
                     />
-                  </Link>
+                  </ScrollLink>
                   <button
                     type="button"
                     className="rounded-md text-gray-700"
@@ -100,10 +101,12 @@ const Header = () => {
                   <div className="-my-6 divide-y divide-gray-500">
                     <div className="space-y-2 py-6">
                       {NavItemsData.map((navItem, index) => (
-                        <Link
+                        <ScrollLink
                           key={index}
                           to={navItem.link}
-                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 ${
+                          smooth={true}
+                          duration={500}
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
                             location.pathname === navItem.link
                               ? "text-yellow-600 dark:text-yellow-500 font-bold"
                               : "text-gray-900 dark:text-gray-300"
@@ -111,7 +114,7 @@ const Header = () => {
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {navItem.text}
-                        </Link>
+                        </ScrollLink>
                       ))}
                     </div>
                     <div className="flex items-center justify-center py-5">
