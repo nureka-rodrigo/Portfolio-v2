@@ -11,8 +11,8 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg text-yellow-600 dark:text-yellow-500 mb-2">Hi, I am</p>
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <p className="text-lg text-yellow-600 dark:text-yellow-500 mb-2 transition duration-300">Hi, I am</p>
+          <h1 className="text-5xl font-bold text-neutral-900 dark:text-gray-100 mb-4 transition duration-300">
             <TypeAnimation
               sequence={[
                 "Nureka Rodrigo.",
@@ -26,14 +26,14 @@ const Home = () => {
               style={{ display: 'inline-block' }}
             />
           </h1>
-          <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto transition duration-300">
             I am a web developer with a strong foundation in front-end & back-end development and am skilled in creating
             user-friendly, responsive, and functional web applications using React and its ecosystem.{' '}
             <ScrollLink
               to="about"
               smooth={true}
               duration={500}
-              className="text-yellow-600 dark:text-yellow-500 hover:underline cursor-pointer"
+              className="text-yellow-600 dark:text-yellow-500 hover:underline cursor-pointer transition duration-300"
             >
               Learn more
             </ScrollLink>

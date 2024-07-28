@@ -45,17 +45,17 @@ const Header = () => {
             {NavItemsData.map((navItem, index) => (
               navItem.link.startsWith('http') ? (
                 // External link
-                <a
+                <Link
                   key={index}
-                  href={navItem.link}
+                  to={navItem.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 ${
-                    navItem.link.includes('flowcv.com') ? 'text-blue-600 font-bold' : ''
+                    navItem.text === "Resume" ? 'text-yellow-600 dark:text-yellow-500' : ''
                   }`}
                 >
                   {navItem.text}
-                </a>
+                </Link>
               ) : (
                 // Internal link
                 <ScrollLink
@@ -63,9 +63,7 @@ const Header = () => {
                   to={navItem.link}
                   smooth={true}
                   duration={500}
-                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
-                    location.pathname === `#${navItem.link}` ? "text-yellow-600 dark:text-yellow-500 font-bold" : "text-gray-900 dark:text-gray-300"
-                  } hover:text-yellow-500 dark:hover:text-yellow-600`}
+                  className="text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
                 >
                   {navItem.text}
                 </ScrollLink>
@@ -123,7 +121,7 @@ const Header = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
-                              navItem.link.includes('flowcv.com') ? 'text-blue-600 font-bold' : 'text-gray-900 dark:text-gray-300'
+                              navItem.text === "Resume" ? 'text-yellow-600 dark:text-yellow-500' : 'text-gray-900 dark:text-gray-300'
                             } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
@@ -136,9 +134,7 @@ const Header = () => {
                             to={navItem.link}
                             smooth={true}
                             duration={500}
-                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
-                              location.pathname === `#${navItem.link}` ? "text-yellow-600 dark:text-yellow-500 font-bold" : "text-gray-900 dark:text-gray-300"
-                            } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {navItem.text}
