@@ -4,6 +4,7 @@ import Header from "./components/Header.jsx";
 import EmailSection from "./components/EmailSection.jsx";
 import SocialLinks from "./components/SocialLinks.jsx";
 import Projects from "./components/Projects.jsx";
+import Experience from "./components/Experience.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Header />
           {/* Content */}
           <div className="container pt-10 max-w-7xl mx-auto px-4">
+            <Experience />
             <Projects />
           </div>
           <Footer />

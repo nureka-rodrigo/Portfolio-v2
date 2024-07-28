@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <div>
-      <section className="py-20">
+      <section id="projects">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-16">
             <h2 className="text-4xl text-yellow-600 dark:text-yellow-500 font-bold text-center transition duration-300">Projects</h2>

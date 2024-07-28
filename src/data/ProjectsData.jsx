@@ -4,7 +4,7 @@ export const ProjectsData = [
         description: "Modern, responsive, and user-friendly portfolio website that showcases my skills, projects, and experience.",
         tags: ["ReactJS", "Tailwind CSS",],
         github: "https://github.com/nureka-rodrigo/Portfolio-v1",
-        live: "https://nureka-rodrigo.github.io/Portfolio-v1/",
+        live: null,
     },
     {
         title: "ABC University",
