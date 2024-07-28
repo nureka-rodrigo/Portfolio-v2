@@ -26,13 +26,13 @@ const Projects = () => {
             {ProjectsData.slice(0, visibleProjects).map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-neutral-900 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 border border-yellow-600 dark:border-yellow-500 transition duration-300 transform hover:scale-105 flex flex-col justify-between h-80"
+                className="bg-white dark:bg-neutral-900 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 border border-yellow-600 dark:border-yellow-500 transition duration-300 transform hover:scale-105 flex flex-col justify-between lg:h-80"
                 initial="hidden"
                 animate="visible"
                 variants={cardVariants}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex justify-between items-start space-x-2 mb-4">
                   <h3 className="text-2xl font-bold text-yellow-600 dark:text-yellow-500">{project.title}</h3>
                   <div className="flex space-x-4 mt-2">
                     <a
