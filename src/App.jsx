@@ -6,6 +6,8 @@ import SocialLinks from "./components/SocialLinks.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
+import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
 
 function App() {
   return (
@@ -13,13 +15,12 @@ function App() {
       <div className="bg-gray-100 dark:bg-neutral-950 transition duration-300">
         <div className="flex flex-col min-h-screen">
           <Header />
-          {/* Content */}
           <div className="container py-10 max-w-7xl mx-auto px-4">
             <section id="home">
-              <h1 className="text-4xl font-bold mb-8">Home</h1>
+              <Home />
             </section>
             <section id="about">
-              <h1 className="text-4xl font-bold mb-8">About</h1>
+              <About />
             </section>
             <section id="experience">
               <Experience />
