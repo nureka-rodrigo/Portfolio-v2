@@ -1,4 +1,4 @@
-export const NavItems = [
+export const NavItemsData = [
   {
     text: "Home",
     link: "/",

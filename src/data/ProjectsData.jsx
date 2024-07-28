@@ -1,10 +1,10 @@
-export const Projects = [
+export const ProjectsData = [
     {
         title: "Portfolio",
         description: "Modern, responsive, and user-friendly portfolio website that showcases my skills, projects, and experience.",
         tags: ["ReactJS", "Tailwind CSS",],
         github: "https://github.com/nureka-rodrigo/Portfolio-v1",
-        live: null,
+        live: "https://nureka-rodrigo.github.io/Portfolio-v1/",
     },
     {
         title: "ABC University",
@@ -14,7 +14,7 @@ export const Projects = [
         live: null,
     },
     {
-        title: "Railway Management System",
+        title: "SLRMS",
         description: "Revolutionizing railway operations with a robust system that manages schedules, bookings, and passenger information seamlessly.",
         tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap",],
         github: "https://github.com/nureka-rodrigo/SLRMS",

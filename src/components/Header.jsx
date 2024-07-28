@@ -5,7 +5,7 @@ import {useContext, useState} from "react";
 import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
 import {Link, useLocation} from "react-router-dom";
-import {NavItems} from "../data/NavItems.jsx";
+import {NavItemsData} from "../data/NavItemsData.jsx";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ const Header = () => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {NavItems.map((navItem, index) => (
+            {NavItemsData.map((navItem, index) => (
               <Link
                 key={index}
                 to={navItem.link}
@@ -99,7 +99,7 @@ const Header = () => {
                 <div className="mt-6 flow-root">
                   <div className="-my-6 divide-y divide-gray-500">
                     <div className="space-y-2 py-6">
-                      {NavItems.map((navItem, index) => (
+                      {NavItemsData.map((navItem, index) => (
                         <Link
                           key={index}
                           to={navItem.link}
