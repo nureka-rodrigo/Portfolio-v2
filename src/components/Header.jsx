@@ -6,6 +6,7 @@ import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
 import {Link as ScrollLink} from "react-scroll";
 import {NavItemsData} from "../data/NavItemsData.jsx";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,15 +43,33 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {NavItemsData.map((navItem, index) => (
-              <ScrollLink
-                key={index}
-                to={navItem.link}
-                smooth={true}
-                duration={500}
-                className="text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
-              >
-                {navItem.text}
-              </ScrollLink>
+              navItem.link.startsWith('http') ? (
+                // External link
+                <a
+                  key={index}
+                  href={navItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 ${
+                    navItem.link.includes('flowcv.com') ? 'text-blue-600 font-bold' : ''
+                  }`}
+                >
+                  {navItem.text}
+                </a>
+              ) : (
+                // Internal link
+                <ScrollLink
+                  key={index}
+                  to={navItem.link}
+                  smooth={true}
+                  duration={500}
+                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
+                    location.pathname === `#${navItem.link}` ? "text-yellow-600 dark:text-yellow-500 font-bold" : "text-gray-900 dark:text-gray-300"
+                  } hover:text-yellow-500 dark:hover:text-yellow-600`}
+                >
+                  {navItem.text}
+                </ScrollLink>
+              )
             ))}
           </div>
 
@@ -81,7 +100,7 @@ const Header = () => {
                     <img
                       className={`h-10 w-auto transition duration-300 ${currentTheme === "dark" ? "filter invert" : ""}`}
                       src="/logo.svg"
-                      alt=""
+                      alt="Brand"
                     />
                   </ScrollLink>
                   <button
@@ -96,20 +115,35 @@ const Header = () => {
                   <div className="-my-6 divide-y divide-gray-500">
                     <div className="space-y-2 py-6">
                       {NavItemsData.map((navItem, index) => (
-                        <ScrollLink
-                          key={index}
-                          to={navItem.link}
-                          smooth={true}
-                          duration={500}
-                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
-                            location.pathname === navItem.link
-                              ? "text-yellow-600 dark:text-yellow-500 font-bold"
-                              : "text-gray-900 dark:text-gray-300"
-                          } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {navItem.text}
-                        </ScrollLink>
+                        navItem.link.startsWith('http') ? (
+                          // External link
+                          <Link
+                            key={index}
+                            to={navItem.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
+                              navItem.link.includes('flowcv.com') ? 'text-blue-600 font-bold' : 'text-gray-900 dark:text-gray-300'
+                            } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {navItem.text}
+                          </Link>
+                        ) : (
+                          // Internal link
+                          <ScrollLink
+                            key={index}
+                            to={navItem.link}
+                            smooth={true}
+                            duration={500}
+                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
+                              location.pathname === `#${navItem.link}` ? "text-yellow-600 dark:text-yellow-500 font-bold" : "text-gray-900 dark:text-gray-300"
+                            } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {navItem.text}
+                          </ScrollLink>
+                        )
                       ))}
                     </div>
                     <div className="flex items-center justify-center py-5">

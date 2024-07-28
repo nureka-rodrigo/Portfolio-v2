@@ -19,4 +19,8 @@ export const NavItemsData = [
     text: "Contact",
     link: "contact",
   },
+  {
+    text: "Resume",
+    link: "https://flowcv.com/resume/ic2he0lik0",
+  },
 ];
