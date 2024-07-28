@@ -4,7 +4,7 @@ const EmailSection = () => {
       <div className="flex flex-col items-center">
         <a
           href="mailto:nurekadulshanmc@gmail.com"
-          className="text-gray-700 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
+          className="text-neutral-900 dark:text-gray-100 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
           style={{ writingMode: "vertical-rl", transform: "rotate(3600deg)" }}
         >
           nurekadulshanmc@gmail.com

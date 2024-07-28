@@ -7,7 +7,7 @@ const SocialLinks = () => {
         href="https://github.com/nureka-rodrigo"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
+        className="text-neutral-900 dark:text-gray-100 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
       >
         <FaGithub size={30} />
       </a>
@@ -15,7 +15,7 @@ const SocialLinks = () => {
         href="https://www.linkedin.com/in/nureka-rodrigo"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
+        className="text-neutral-900 dark:text-gray-100 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
       >
         <FaLinkedin size={30} />
       </a>
@@ -23,7 +23,7 @@ const SocialLinks = () => {
         href="https://www.instagram.com/nureka_rodrigo"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-700 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
+        className="text-neutral-900 dark:text-gray-100 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
       >
         <FaInstagram size={30} />
       </a>
