@@ -5,6 +5,7 @@ import EmailSection from "./components/EmailSection.jsx";
 import SocialLinks from "./components/SocialLinks.jsx";
 import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <Header />
           {/* Content */}
-          <div className="container pt-10 max-w-7xl mx-auto px-4">
+          <div className="container py-10 max-w-7xl mx-auto px-4">
             <Experience />
             <Projects />
+            <Contact />
           </div>
           <Footer />
         </div>
