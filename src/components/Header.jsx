@@ -5,7 +5,7 @@ import {useContext, useState} from "react";
 import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
 import {Link, useLocation} from "react-router-dom";
-import {NavItems} from "../data/NavItems.js";
+import {NavItems} from "../data/NavItems.jsx";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -74,7 +74,7 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               />
               <motion.div
-                className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+                className="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}

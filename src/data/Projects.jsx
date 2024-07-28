@@ -2,7 +2,7 @@ export const Projects = [
     {
         title: "Portfolio",
         description: "Modern, responsive, and user-friendly portfolio website that showcases my skills, projects, and experience.",
-        tags: ["ReactJS", "Tailwind CSS"],
+        tags: ["ReactJS", "Tailwind CSS",],
         github: "https://github.com/nureka-rodrigo/Portfolio-v1",
         live: null,
     },
@@ -30,7 +30,7 @@ export const Projects = [
     {
         title: "ABC Hotel",
         description: "Simple, innovative and modern Hotel Management System that simplifies the process of managing hotel reservations and provides a seamless experience for guests.",
-        tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+        tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap",],
         github: "https://github.com/nureka-rodrigo/ABC-Hotel",
         live: null,
     },
