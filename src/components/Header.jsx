@@ -5,29 +5,7 @@ import {useContext, useState} from "react";
 import ThemeButton from "./ThemeButton.jsx";
 import {ThemeContext} from "../providers/ThemeProvider.jsx";
 import {Link, useLocation} from "react-router-dom";
-
-const NavItems = [
-  {
-    text: "Home",
-    link: "/",
-  },
-  {
-    text: "About",
-    link: "#about",
-  },
-  {
-    text: "Experience",
-    link: "#experience",
-  },
-  {
-    text: "Projects",
-    link: "#projects",
-  },
-  {
-    text: "Contact",
-    link: "#contact",
-  },
-];
+import {NavItems} from "../data/NavItems.js";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,7 +15,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`bg-gray-100 dark:bg-neutral-950 transition duration-300 ${mobileMenuOpen ? "bg-opacity-50" : "fixed top-0 left-0 right-0 z-50 bg-opacity-0"}`}
+        className={`bg-gray-100 dark:bg-neutral-950 transition duration-300 ${mobileMenuOpen ? "bg-opacity-50" : "fixed top-0 left-0 right-0 z-50"}`}
       >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8"
