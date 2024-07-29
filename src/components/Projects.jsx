@@ -64,7 +64,7 @@ const Projects = () => {
               </div>
             </div>
             <p
-              className="text-neutral-900 dark:text-gray-100 mt-2 text-justify transition duration-300 overflow-hidden overflow-ellipsis"
+              className="text-neutral-900 dark:text-gray-100 mt-2 transition duration-300 overflow-hidden overflow-ellipsis"
               style={{
                 display: "-webkit-box",
                 WebkitLineClamp: 4,
@@ -73,7 +73,7 @@ const Projects = () => {
             >
               {project.description}
             </p>
-            <div className="mt-4 flex flex-wrap">
+            <div className="mt-4 flex flex-wrap justify-center">
               {project.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
