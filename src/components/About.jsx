@@ -18,14 +18,15 @@ const About = () => {
           </div>
           <div className="w-full md:w-2/3 md:pl-12 text-justify text-gray-900 dark:text-gray-300 transition duration-300">
             <p className="mb-6">
-              Hi, I'm Nureka Rodrigo, a web developer with a strong foundation in front-end & back-end development and
-              am skilled in creating user-friendly, responsive, and functional web applications using React and its
-              ecosystem.
+              Hi, I'm Nureka Rodrigo, a web developer from Sri Lanka, born in 1999. My educational journey began at
+              Mahanama College, Colombo 03 for primary school, followed by Ananda College, Colombo 10 for secondary
+              school. This diverse educational background has equipped me with a broad perspective and a passion for
+              learning.
             </p>
             <p className="mb-6">
-              I have a passion for learning and exploring new technologies, and I'm constantly looking for
-              ways to improve my skills and deliver the best possible results. Below are some of the technologies I have
-              worked with:
+              I am constantly exploring new technologies and seeking ways to improve my skills. My dedication to
+              continuous learning enables me to deliver the best possible results in my projects. Below are some of the
+              technologies I have worked with:
             </p>
             <div className="flex flex-wrap justify-start items-center">
               {TechnologiesData.map((tech, index) => (

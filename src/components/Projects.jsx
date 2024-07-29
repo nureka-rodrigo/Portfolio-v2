@@ -26,7 +26,7 @@ const Projects = () => {
           {ProjectsData.slice(0, visibleProjects).map((project, index) => (
             <motion.div
               key={index}
-              className="bg-white dark:bg-neutral-900 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 border border-yellow-600 dark:border-yellow-500 transition duration-300 transform hover:scale-105 flex flex-col justify-between lg:h-80"
+              className="bg-white dark:bg-neutral-900 bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg p-8 border border-yellow-600 dark:border-yellow-500 transition duration-300 transform hover:scale-105 flex flex-col justify-between lg:h-90"
               initial="hidden"
               animate="visible"
               variants={cardVariants}

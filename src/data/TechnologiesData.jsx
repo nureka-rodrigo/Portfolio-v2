@@ -8,6 +8,7 @@ import {
   FaJsSquare,
   FaLaravel,
   FaLinux,
+  FaMarkdown,
   FaNodeJs,
   FaPhp,
   FaPython,
@@ -25,7 +26,8 @@ import {
   SiMicrosoftsqlserver,
   SiMysql,
   SiSpring,
-  SiTailwindcss
+  SiTailwindcss,
+  SiVite
 } from "react-icons/si";
 
 export const TechnologiesData = [
@@ -38,6 +40,7 @@ export const TechnologiesData = [
   {name: "PHP", icon: <FaPhp/>},
   {name: "Python", icon: <FaPython/>},
   {name: "Kotlin", icon: <SiKotlin/>},
+  {name: "Markdown", icon: <FaMarkdown/>},
 
   // Frameworks
   {name: "Bootstrap", icon: <FaBootstrap/>},
@@ -46,6 +49,7 @@ export const TechnologiesData = [
   {name: "Spring", icon: <SiSpring/>},
   {name: "Django", icon: <SiDjango/>},
   {name: "Laravel", icon: <FaLaravel/>},
+  {name: "Vite", icon: <SiVite/>},
 
   // Tools
   {name: "Node.js", icon: <FaNodeJs/>},
