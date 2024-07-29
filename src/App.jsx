@@ -11,34 +11,30 @@ import About from "./components/About.jsx";
 
 function App() {
   return (
-    <>
-      <div className="bg-gray-100 dark:bg-neutral-950 transition duration-300">
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <div className="container py-10 max-w-7xl mx-auto px-4">
-            <section id="home">
-              <Home />
-            </section>
-            <section id="about">
-              <About />
-            </section>
-            <section id="experience">
-              <Experience />
-            </section>
-            <section id="projects">
-              <Projects />
-            </section>
-            <section id="contact">
-              <Contact />
-            </section>
-          </div>
-          <Footer />
-        </div>
-
-        <SocialLinks />
-        <EmailSection />
+    <div className="min-h-screen bg-gray-100 dark:bg-neutral-950 transition duration-300">
+      <Header />
+      <div className="container pb-10 max-w-7xl mx-auto px-4">
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
-    </>
+      <Footer />
+
+      <SocialLinks />
+      <EmailSection />
+    </div>
   );
 }
 
