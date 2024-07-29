@@ -3,7 +3,7 @@ import ProfileImage from "../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section className="bg-gray-100 dark:bg-neutral-950 transition duration-300">
+    <section className="pt-20 bg-gray-100 dark:bg-neutral-950 transition duration-300">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl text-yellow-600 dark:text-yellow-500 font-bold">

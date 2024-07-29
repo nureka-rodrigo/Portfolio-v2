@@ -1,12 +1,12 @@
-import { IoMdClose } from "react-icons/io";
-import { IoMenu } from "react-icons/io5";
-import { AnimatePresence, motion } from "framer-motion";
-import { useContext, useState } from "react";
+import {IoMdClose} from "react-icons/io";
+import {IoMenu} from "react-icons/io5";
+import {AnimatePresence, motion} from "framer-motion";
+import {useContext, useState} from "react";
 import ThemeButton from "./ThemeButton.jsx";
-import { ThemeContext } from "../providers/ThemeProvider.jsx";
-import { Link as ScrollLink } from "react-scroll";
-import { NavItemsData } from "../data/NavItemsData.jsx";
-import { Link } from "react-router-dom";
+import {ThemeContext} from "../providers/ThemeProvider.jsx";
+import {Link as ScrollLink} from "react-scroll";
+import {NavItemsData} from "../data/NavItemsData.jsx";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
       <header
         className={`bg-gray-100 dark:bg-neutral-950 transition duration-300 ${
           mobileMenuOpen ? "bg-opacity-50" : "fixed top-0 left-0 right-0 z-50"
-        }`}
+        } lg:bg-opacity-30 dark:lg:bg-opacity-30 lg:backdrop-blur-lg dark:lg:backdrop-blur-lg`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8">
           <div className="flex lg:flex-1">
