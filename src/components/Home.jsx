@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
-import { Link as ScrollLink } from "react-scroll";
+import {motion} from "framer-motion";
+import {TypeAnimation} from "react-type-animation";
+import {Link as ScrollLink} from "react-scroll";
 
 const Home = () => {
   return (
@@ -33,7 +33,7 @@ const Home = () => {
           </h1>
           <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto transition duration-300">
             I am a web developer from Sri Lanka. I have a strong foundation in
-            both front-end and back-end development, and I'm skilled in creating
+            both front-end and back-end development, and I&apos;m skilled in creating
             user-friendly, responsive, and functional web applications using
             React and its ecosystem.{" "}
             <ScrollLink
