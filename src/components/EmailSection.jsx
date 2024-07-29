@@ -1,6 +1,6 @@
 const EmailSection = () => {
   return (
-    <div className="hidden lg:flex lg:flex-col lg:items-center fixed right-8 bottom-0 mb-4">
+    <div className="hidden xl:flex lg:flex-col lg:items-center fixed right-8 bottom-0 mb-4">
       <div className="flex flex-col items-center">
         <a
           href="mailto:nurekadulshanmc@gmail.com"

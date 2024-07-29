@@ -10,16 +10,17 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { currentTheme } = useContext(ThemeContext);
+  const {currentTheme} = useContext(ThemeContext);
 
   return (
     <>
       <header
-        className={`bg-gray-100 dark:bg-neutral-950 transition duration-300 ${
-          mobileMenuOpen ? "bg-opacity-50" : "fixed top-0 left-0 right-0 z-50"
-        } lg:bg-opacity-30 dark:lg:bg-opacity-30 lg:backdrop-blur-lg dark:lg:backdrop-blur-lg`}
+        className={` transition duration-300 fixed top-0 left-0 right-0 z-50 ${
+          mobileMenuOpen ? "bg-opacity-50" : ""
+        } bg-opacity-30 dark:bg-opacity-30`}
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8">
+        <nav
+          className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8 backdrop-blur-lg dark:backdrop-blur-lg">
           <div className="flex lg:flex-1">
             <ScrollLink
               to="home"
@@ -81,28 +82,21 @@ const Header = () => {
           </div>
 
           <div className="pl-6 pr-2 hidden lg:block">
-            <ThemeButton />
+            <ThemeButton/>
           </div>
         </nav>
         <AnimatePresence>
           {mobileMenuOpen && (
-            <>
-              <motion.div
-                className="fixed inset-0 z-10 bg-black bg-opacity-50"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setMobileMenuOpen(false)}
-              />
-              <motion.div
-                className="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-100 dark:bg-neutral-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="flex items-center justify-between">
+            <motion.div
+              className="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              initial={{x: "100%"}}
+              animate={{x: 0}}
+              exit={{x: "100%"}}
+              transition={{duration: 0.3}}
+            >
+              <div className="px-6 py-6 h-full bg-gray-100 dark:bg-neutral-950 transition duration-300">
+                <div
+                  className="flex items-center justify-between">
                   <ScrollLink
                     to="home"
                     smooth={true}
@@ -122,7 +116,7 @@ const Header = () => {
                     className="rounded-md text-gray-700"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300" />
+                    <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"/>
                   </button>
                 </div>
                 <div className="mt-6 flow-root">
@@ -161,12 +155,12 @@ const Header = () => {
                       )}
                     </div>
                     <div className="flex items-center justify-center py-5">
-                      <ThemeButton />
+                      <ThemeButton/>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
       </header>

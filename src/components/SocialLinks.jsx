@@ -1,8 +1,8 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
 
 const SocialLinks = () => {
   return (
-    <div className="hidden lg:flex lg:flex-col lg:items-center fixed left-8 bottom-0 p-4 space-y-4">
+    <div className="hidden xl:flex lg:flex-col lg:items-center fixed left-8 bottom-0 p-4 space-y-4">
       <a
         href="https://github.com/nureka-rodrigo"
         target="_blank"
