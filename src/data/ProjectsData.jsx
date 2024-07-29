@@ -60,7 +60,7 @@ export const ProjectsData = [
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/Portfolio-v1",
-    live: "https://nureka-rodrigo.onrender.com/",
+    live: null,
   },
   {
     title: "ABC University",
