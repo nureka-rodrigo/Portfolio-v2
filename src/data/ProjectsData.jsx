@@ -1,5 +1,14 @@
 export const ProjectsData = [
   {
+    title: "Portfolio-v2",
+    description:
+      "A single-page personal portfolio website developed using React.js. It showcases the developer's skills, experience, projects, and projects.",
+    tags: ["ReactJS", "Vite", "Tailwind CSS"],
+    year: "2024",
+    github: "https://github.com/nureka-rodrigo/Portfolio-v2",
+    live: "https://nureka-rodrigo.onrender.com/",
+  },
+  {
     title: "Wildlife-Circle USJP",
     description:
       "A dynamic web application developed for the Wildlife Circle at the University of Sri Jayewardenepura. Wildlife Circle offers a comprehensive platform with features that enhance user experience and provide robust administrative tools.",
