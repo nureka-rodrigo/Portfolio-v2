@@ -9,7 +9,7 @@ export const ExperienceData = [
       "Contributed to project planning, requirement analysis, and documentation to support project goals and timelines.",
       "Conducted code reviews, testing, and debugging to ensure high-quality deliverables.",
     ],
-    start: "2023-11-01",
+    start: "2023-10-01",
     end: null,
   },
 ];
