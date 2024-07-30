@@ -12,6 +12,7 @@ import SocialLinks from "./components/common/SocialLinks.jsx";
 import "./App.css";
 
 function App() {
+  // Custom hook to handle in-view animations for sections
   const [homeRef, homeInView] = useInViewAnimation();
   const [aboutRef, aboutInView] = useInViewAnimation();
   const [experienceRef, experienceInView] = useInViewAnimation();
@@ -20,8 +21,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-950 transition duration-300">
+      {/* Header component */}
       <Header />
       <div className="container pb-10 max-w-7xl mx-auto px-4">
+        {/* Home section with in-view animation */}
         <section
           id="home"
           ref={homeRef}
@@ -31,6 +34,7 @@ function App() {
         >
           <Home />
         </section>
+        {/* About section with in-view animation */}
         <section
           id="about"
           ref={aboutRef}
@@ -40,6 +44,7 @@ function App() {
         >
           <About />
         </section>
+        {/* Experience section with in-view animation */}
         <section
           id="experience"
           ref={experienceRef}
@@ -49,6 +54,7 @@ function App() {
         >
           <Experience />
         </section>
+        {/* Projects section with in-view animation */}
         <section
           id="projects"
           ref={projectsRef}
@@ -58,6 +64,7 @@ function App() {
         >
           <Projects />
         </section>
+        {/* Contact section with in-view animation */}
         <section
           id="contact"
           ref={contactRef}
@@ -68,11 +75,15 @@ function App() {
           <Contact />
         </section>
       </div>
+      {/* Footer component */}
       <Footer />
 
+      {/* Social links component */}
       <SocialLinks />
+      {/* Email section component */}
       <EmailSection />
 
+      {/* Scroll to top button component */}
       <ScrollToTopButton />
     </div>
   );

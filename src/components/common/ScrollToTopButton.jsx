@@ -2,25 +2,30 @@ import { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 const ScrollToTopButton = () => {
+  // State to track the visibility of the scroll-to-top button
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Function to toggle the visibility of the button based on scroll position
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setVisible(true);
+        setVisible(true); // Show button when scrolled more than 300px
       } else {
-        setVisible(false);
+        setVisible(false); // Hide button when scrolled less than 300px
       }
     };
 
+    // Add scroll event listener to the window
     window.addEventListener("scroll", toggleVisibility);
+    // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+  // Function to scroll the window to the top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth", // Smooth scrolling behavior
     });
   };
 

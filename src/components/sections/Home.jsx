@@ -9,14 +9,18 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-neutral-950 transition duration-300"
     >
       <div className="container mx-auto px-4 text-center">
+        {/* Animation for the introduction section */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          {/* Introductory text */}
           <p className="text-lg text-yellow-600 dark:text-yellow-500 mb-2 transition duration-300">
             Hi, I am
           </p>
+
+          {/* Animated name and title */}
           <h1 className="text-5xl font-bold text-neutral-900 dark:text-gray-100 mb-4 transition duration-300">
             <TypeAnimation
               sequence={[
@@ -31,6 +35,8 @@ const Home = () => {
               style={{ display: "inline-block" }}
             />
           </h1>
+
+          {/* Description and link to the 'about' section */}
           <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto transition duration-300">
             I am a web developer from Sri Lanka. I have a strong foundation in
             both front-end and back-end development, and I&apos;m skilled in

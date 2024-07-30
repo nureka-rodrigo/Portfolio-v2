@@ -1,30 +1,35 @@
+/* Custom scrollbar styles for light mode */
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 12px; /* Width of the scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f1; /* Color of the scrollbar track */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #fbbf24;
-  border-radius: 10px;
+  background-color: #fbbf24; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
 }
 
+/* Custom scrollbar styles for dark mode */
 body.dark::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #1f2937; /* Color of the scrollbar track in dark mode */
 }
 
 body.dark::-webkit-scrollbar-thumb {
-  background-color: #fbbf24;
+  background-color: #fbbf24; /* Color of the scrollbar thumb in dark mode */
 }
 
+/* Utility classes for opacity transition */
 .transition-opacity {
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out; /* Smooth transition for opacity changes */
 }
+
 .opacity-0 {
-  opacity: 0;
+  opacity: 0; /* Fully transparent */
 }
+
 .opacity-100 {
-  opacity: 1;
+  opacity: 1; /* Fully opaque */
 }

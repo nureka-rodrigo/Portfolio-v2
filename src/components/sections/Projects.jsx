@@ -10,7 +10,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const handleShowMore = () => {
-    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 6);
+    setVisibleProjects(prev => prev + 6);
   };
 
   const handleViewMore = (project) => {
@@ -41,7 +41,7 @@ const Projects = () => {
             initial="hidden"
             animate="visible"
             variants={cardVariants}
-            transition={{duration: 0.5, delay: index * 0.1}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="flex justify-between items-start space-x-2">
               <div onClick={() => handleViewMore(project)} className="cursor-pointer">
@@ -60,7 +60,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-neutral-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-500 transition duration-300"
                   >
-                    <FaGithub className="text-xl"/>
+                    <FaGithub className="text-xl" />
                   </Link>
                 )}
                 {project.live && (
@@ -70,7 +70,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-neutral-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-500 transition duration-300"
                   >
-                    <FaExternalLinkAlt className="text-xl"/>
+                    <FaExternalLinkAlt className="text-xl" />
                   </Link>
                 )}
               </div>
@@ -109,7 +109,7 @@ const Projects = () => {
         </div>
       )}
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={handleCloseModal}/>
+        <ProjectModal project={selectedProject} onClose={handleCloseModal} />
       )}
     </section>
   );

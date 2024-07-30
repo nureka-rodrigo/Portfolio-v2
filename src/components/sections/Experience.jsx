@@ -3,20 +3,26 @@ import { ExperienceData } from "../../data/ExperienceData.jsx";
 import { motion } from "framer-motion";
 
 const Experience = () => {
+  // State to keep track of the selected experience index
   const [selectedExperience, setSelectedExperience] = useState(0);
 
+  // Handler to set the selected experience based on the index
   const handleExperienceClick = (index) => {
     setSelectedExperience(index);
   };
 
   return (
     <section className="container mx-auto px-4 pt-20">
+      {/* Title section */}
       <div className="flex flex-col items-center mb-16">
         <h2 className="text-4xl text-yellow-600 dark:text-yellow-500 font-bold text-center transition duration-300">
           Experience
         </h2>
       </div>
+
+      {/* Experience list and details */}
       <div className="flex flex-col md:flex-row">
+        {/* Sidebar with list of experiences */}
         <div className="md:w-1/4">
           <div className="flex md:flex-col overflow-x-auto md:overflow-y-auto">
             {ExperienceData.map((experience, index) => (
@@ -34,6 +40,8 @@ const Experience = () => {
             ))}
           </div>
         </div>
+
+        {/* Details of the selected experience */}
         <div className="md:w-3/4 md:pl-10 mt-6 md:mt-0">
           {ExperienceData.map(
             (experience, index) =>
