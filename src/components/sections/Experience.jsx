@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExperienceData } from "../data/ExperienceData.jsx";
+import { ExperienceData } from "../../data/ExperienceData.jsx";
 import { motion } from "framer-motion";
 
 const Experience = () => {

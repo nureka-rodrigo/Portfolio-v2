@@ -1,14 +1,14 @@
 import useInViewAnimation from "./hooks/useInViewAnimation";
-import Home from "./components/Home.jsx";
-import Header from "./components/Header.jsx";
-import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
-import EmailSection from "./components/EmailSection.jsx";
-import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
-import SocialLinks from "./components/SocialLinks.jsx";
+import Home from "./components/sections/Home.jsx";
+import Header from "./components/layout/Header.jsx";
+import About from "./components/sections/About.jsx";
+import Experience from "./components/sections/Experience.jsx";
+import Projects from "./components/sections/Projects.jsx";
+import Contact from "./components/sections/Contact.jsx";
+import Footer from "./components/layout/Footer.jsx";
+import EmailSection from "./components/common/EmailSection.jsx";
+import ScrollToTopButton from "./components/common/ScrollToTopButton.jsx";
+import SocialLinks from "./components/common/SocialLinks.jsx";
 import "./App.css";
 
 function App() {

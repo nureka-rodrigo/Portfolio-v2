@@ -1,4 +1,4 @@
-import { ThemeContext } from "../providers/ThemeProvider.jsx";
+import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 import { useContext } from "react";
 import { IoHeart } from "react-icons/io5";
 
