@@ -29,7 +29,7 @@ const ScrollToTopButton = () => {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-8 xl:right-20 bg-yellow-600 dark:bg-yellow-500 text-white p-2 rounded-full shadow-lg hover:bg-yellow-700 dark:hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 dark:focus:ring-yellow-500"
+          className="fixed bottom-12 right-8 xl:right-20 bg-yellow-600 dark:bg-yellow-500 text-white p-2 rounded-full shadow-lg hover:bg-yellow-700 dark:hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 dark:focus:ring-yellow-500"
         >
           <div className="animate-bounce">
             <MdOutlineKeyboardArrowUp className="size-7"/>
