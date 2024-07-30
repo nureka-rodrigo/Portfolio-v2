@@ -1,4 +1,4 @@
-import {useInView} from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 const useInViewAnimation = () => {
   const { ref, inView } = useInView({

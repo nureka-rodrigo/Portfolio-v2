@@ -1,4 +1,4 @@
-import {TechnologiesData} from "../data/TechnologiesData.jsx";
+import { TechnologiesData } from "../data/TechnologiesData.jsx";
 import ProfileImage from "../assets/profile.jpg";
 
 const About = () => {
@@ -14,22 +14,25 @@ const About = () => {
           <div className="w-full md:w-2/3 lg:w-1/3 mb-8 md:mb-0">
             <img
               src={ProfileImage}
-              alt="Profile"
+              alt="Profile Image"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
-          <div
-            className="w-full md:pt-8 lg:w-2/3 lg:pl-12 text-justify text-gray-900 dark:text-gray-300 transition duration-300">
+          <div className="w-full md:pt-8 lg:w-2/3 lg:pl-12 text-justify text-gray-900 dark:text-gray-300 transition duration-300">
             <p className="mb-6">
-              Hi, I&apos;m Nureka Rodrigo, a web developer from Sri Lanka, born in 1999. My educational journey began at
-              Mahanama College, Colombo 03, followed by Ananda College, Colombo 10. This diverse educational background
-              has equipped me with a broad perspective and a passion for learning.
+              Hi, I&apos;m Nureka Rodrigo, a web developer from Sri Lanka, born
+              in 1999. My educational journey began at Mahanama College, Colombo
+              03, followed by Ananda College, Colombo 10. This diverse
+              educational background has equipped me with a broad perspective
+              and a passion for learning.
             </p>
             <p className="mb-6">
-              I am currently an undergraduate at Uva Wellassa University pursuing a Bachelor of Computer Science &
-              Technology. My dedication to continuous learning enables me to stay updated with new technologies and
-              improve my skills. I am constantly exploring new technologies and seeking ways to enhance my expertise.
-              Below are some of the technologies I have worked with:
+              I am currently an undergraduate at Uva Wellassa University
+              pursuing a Bachelor of Computer Science & Technology. My
+              dedication to continuous learning enables me to stay updated with
+              new technologies and improve my skills. I am constantly exploring
+              new technologies and seeking ways to enhance my expertise. Below
+              are some of the technologies I have worked with:
             </p>
             <div className="flex flex-wrap justify-center items-center">
               {TechnologiesData.map((tech, index) => (

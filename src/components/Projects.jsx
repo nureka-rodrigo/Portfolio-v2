@@ -1,8 +1,8 @@
-import {useState} from "react";
-import {ProjectsData} from "../data/ProjectsData.jsx";
-import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
-import {motion} from "framer-motion";
-import {Link} from "react-router-dom";
+import { useState } from "react";
+import { ProjectsData } from "../data/ProjectsData.jsx";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
@@ -38,7 +38,9 @@ const Projects = () => {
                 <h3 className="text-2xl font-bold text-yellow-600 dark:text-yellow-500 transition duration-300">
                   {project.title}
                 </h3>
-                <p className="text-sm text-neutral-700 dark:text-gray-400 transition duration-300">{project.year}</p>
+                <p className="text-sm text-neutral-700 dark:text-gray-400 transition duration-300">
+                  {project.year}
+                </p>
               </div>
               <div className="flex space-x-4 mt-2">
                 {project.github && (

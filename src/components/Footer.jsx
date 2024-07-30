@@ -1,6 +1,6 @@
-import {ThemeContext} from "../providers/ThemeProvider.jsx";
-import {useContext} from "react";
-import {IoHeart} from "react-icons/io5";
+import { ThemeContext } from "../providers/ThemeProvider.jsx";
+import { useContext } from "react";
+import { IoHeart } from "react-icons/io5";
 
 const Footer = () => {
   const { currentTheme } = useContext(ThemeContext);

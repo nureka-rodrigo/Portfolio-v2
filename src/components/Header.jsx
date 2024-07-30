@@ -1,12 +1,12 @@
-import {IoMdClose} from "react-icons/io";
-import {IoMenu} from "react-icons/io5";
-import {AnimatePresence, motion} from "framer-motion";
-import {useContext, useState} from "react";
+import { IoMdClose } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
+import { useContext, useState } from "react";
 import ThemeButton from "./ThemeButton.jsx";
-import {ThemeContext} from "../providers/ThemeProvider.jsx";
-import {Link as ScrollLink} from "react-scroll";
-import {NavItemsData} from "../data/NavItemsData.jsx";
-import {Link} from "react-router-dom";
+import { ThemeContext } from "../providers/ThemeProvider.jsx";
+import { Link as ScrollLink } from "react-scroll";
+import { NavItemsData } from "../data/NavItemsData.jsx";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -75,7 +75,7 @@ const Header = () => {
               >
                 {navItem.text}
               </ScrollLink>
-            ),
+            )
           )}
         </div>
 
@@ -148,7 +148,7 @@ const Header = () => {
                         >
                           {navItem.text}
                         </ScrollLink>
-                      ),
+                      )
                     )}
                   </div>
                   <div className="flex items-center justify-center py-5">
