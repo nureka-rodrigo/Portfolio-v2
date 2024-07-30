@@ -2,7 +2,7 @@ export const ProjectsData = [
   {
     title: "Portfolio-v2",
     description:
-      "A single-page personal portfolio website developed using React.js. It showcases the developer's skills, experience, projects, and projects.",
+      "A single-page personal portfolio website developed using React.js. It showcases the user's skills, experience, and projects.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2024",
     github: "https://github.com/nureka-rodrigo/Portfolio-v2",
@@ -56,7 +56,7 @@ export const ProjectsData = [
   {
     title: "Portfolio-v1",
     description:
-      "A multi-page personal portfolio website developed using React.js. It showcases the developer's skills, experience, education, and projects. The website also includes a contact form for visitors to send messages.",
+      "A multi-page personal portfolio website developed using React.js. It showcases the user's skills, experience, education, and projects. The website also includes a contact form for visitors to send messages.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/Portfolio-v1",
