@@ -28,6 +28,7 @@ import {
   SiSpring,
   SiTailwindcss,
   SiVite,
+  SiGraphql, // Import GraphQL icon
 } from "react-icons/si";
 
 export const TechnologiesData = [
@@ -54,6 +55,7 @@ export const TechnologiesData = [
   // Tools
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Composer", icon: <SiComposer /> },
+  { name: "GraphQL", icon: <SiGraphql /> },
 
   // Databases
   { name: "MySQL", icon: <SiMysql /> },
