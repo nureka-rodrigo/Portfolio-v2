@@ -8,6 +8,7 @@ import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
 
       <SocialLinks />
       <EmailSection />
+
+      <ScrollToTopButton />
     </div>
   );
 }
