@@ -38,8 +38,8 @@ const Home = () => {
 
           {/* Description and link to the 'about' section */}
           <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto transition duration-300">
-            I am a web developer from Sri Lanka. I have a strong foundation in
-            both front-end and back-end development, and I&apos;m skilled in
+            I am a web developer from Sri Lanka with a strong foundation in
+            both front-end and back-end development. I&apos;m skilled in
             creating user-friendly, responsive, and functional web applications
             using React and its ecosystem.{" "}
             <ScrollLink
