@@ -1,5 +1,5 @@
-import { TechnologiesData } from "../../data/TechnologiesData.jsx";
 import ProfileImage from "../../assets/profile.jpg";
+import { TechnologiesData } from "../../data/TechnologiesData.jsx";
 
 const About = () => {
   return (

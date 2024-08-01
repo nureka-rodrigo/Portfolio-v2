@@ -1,12 +1,12 @@
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
-import { useContext, useState } from "react";
 import ThemeButton from "../common/ThemeButton.jsx";
 import { ThemeContext } from "../../providers/ThemeProvider.jsx";
-import { Link as ScrollLink } from "react-scroll";
 import { NavItemsData } from "../../data/NavItemsData.jsx";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   // State to manage the visibility of the mobile menu

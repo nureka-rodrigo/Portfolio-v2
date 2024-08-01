@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ProjectsData } from "../../data/ProjectsData.jsx";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ProjectModal from "../common/ProjectModal.jsx";
 

@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 
 const ThemeButton = () => {
   // Accessing the current theme and the function to change the theme from ThemeContext

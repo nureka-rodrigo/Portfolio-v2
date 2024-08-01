@@ -1,6 +1,6 @@
-import { FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa";
 
 const ProjectModal = ({ project, onClose }) => {
   // If no project is provided, do not render the modal

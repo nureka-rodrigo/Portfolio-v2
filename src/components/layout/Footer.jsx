@@ -1,5 +1,5 @@
-import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 import { useContext } from "react";
+import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 import { IoHeart } from "react-icons/io5";
 
 const Footer = () => {
