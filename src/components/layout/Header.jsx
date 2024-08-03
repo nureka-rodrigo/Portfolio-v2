@@ -19,82 +19,84 @@ const Header = () => {
         mobileMenuOpen ? "bg-opacity-50" : ""
       } bg-opacity-30 dark:bg-opacity-30`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 gap-x-8 backdrop-blur-lg dark:backdrop-blur-lg">
-        <div className="flex lg:flex-1">
-          {/* Scroll to the 'home' section when clicking the logo */}
-          <ScrollLink
-            to="home"
-            smooth={true}
-            duration={500}
-            className="-m-1.5 p-1.5 cursor-pointer"
-          >
-            <img
-              className={`h-10 w-auto transition duration-300 ${
-                currentTheme === "dark" ? "filter invert" : ""
-              }`}
-              src="/logo.svg"
-              alt="Brand"
-            />
-          </ScrollLink>
-        </div>
-        <div className="flex lg:hidden">
-          {/* Button to open the mobile menu */}
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <IoMenu
-              className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"
-              aria-hidden="true"
-            />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {/* Navigation items for desktop view */}
-          {NavItemsData.map((navItem, index) =>
-            navItem.link.startsWith("http") ? (
-              // External link
-              <Link
-                key={index}
-                to={navItem.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 ${
-                  navItem.text === "Resume"
-                    ? "text-yellow-600 dark:text-yellow-500"
-                    : ""
+      <nav className="backdrop-blur-lg dark:backdrop-blur-lg">
+        <div className="mx-auto flex max-w-7xl items-center justify-between p-3 gap-x-8 ">
+          <div className="flex lg:flex-1">
+            {/* Scroll to the 'home' section when clicking the logo */}
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              className="-m-1.5 p-1.5 cursor-pointer"
+            >
+              <img
+                className={`h-10 w-auto transition duration-300 ${
+                  currentTheme === "dark" ? "filter invert" : ""
                 }`}
-              >
-                {navItem.text}
-              </Link>
-            ) : (
-              // Internal link
-              <ScrollLink
-                key={index}
-                to={navItem.link}
-                smooth={true}
-                duration={500}
-                className="text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
-              >
-                {navItem.text}
-              </ScrollLink>
-            )
-          )}
-        </div>
-        <div className="pl-6 pr-2 hidden lg:block">
-          {/* Theme toggle button for desktop view */}
-          <ThemeButton />
+                src="/logo.svg"
+                alt="Brand"
+              />
+            </ScrollLink>
+          </div>
+          <div className="flex lg:hidden">
+            {/* Button to open the mobile menu */}
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <IoMenu
+                className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {/* Navigation items for desktop view */}
+            {NavItemsData.map((navItem, index) =>
+              navItem.link.startsWith("http") ? (
+                // External link
+                <Link
+                  key={index}
+                  to={navItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 ${
+                    navItem.text === "Resume"
+                      ? "text-yellow-600 dark:text-yellow-500"
+                      : ""
+                  }`}
+                >
+                  {navItem.text}
+                </Link>
+              ) : (
+                // Internal link
+                <ScrollLink
+                  key={index}
+                  to={navItem.link}
+                  smooth={true}
+                  duration={500}
+                  className="text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
+                >
+                  {navItem.text}
+                </ScrollLink>
+              )
+            )}
+          </div>
+          <div className="pl-6 pr-2 hidden lg:block">
+            {/* Theme toggle button for desktop view */}
+            <ThemeButton/>
+          </div>
         </div>
       </nav>
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.3 }}
+            initial={{x: "100%"}}
+            animate={{x: 0}}
+            exit={{x: "100%"}}
+            transition={{duration: 0.3}}
           >
             <div className="px-6 py-6 h-full bg-gray-100 dark:bg-neutral-950 transition duration-300">
               <div className="flex items-center justify-between">
@@ -119,7 +121,7 @@ const Header = () => {
                   className="rounded-md text-gray-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300" />
+                  <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"/>
                 </button>
               </div>
               <div className="mt-6 flow-root">
