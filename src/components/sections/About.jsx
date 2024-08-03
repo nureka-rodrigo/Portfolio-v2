@@ -3,7 +3,7 @@ import { TechnologiesData } from "../../data/TechnologiesData.jsx";
 
 const About = () => {
   return (
-    <section className="pt-20 bg-gray-100 dark:bg-neutral-950 transition duration-300">
+    <section className="pt-20 transition duration-300">
       <div className="container mx-auto px-4">
         {/* Section title */}
         <div className="text-center mb-12">

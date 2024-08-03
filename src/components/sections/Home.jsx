@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-neutral-950 transition duration-300"
+      className="min-h-screen flex items-center justify-center transition duration-300"
     >
       <div className="container mx-auto px-4 text-center">
         {/* Animation for the introduction section */}
