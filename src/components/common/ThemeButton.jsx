@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa6";
 import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 
 const ThemeButton = () => {
@@ -7,22 +7,20 @@ const ThemeButton = () => {
   const { currentTheme, changeCurrentTheme } = useContext(ThemeContext);
 
   return (
-    <>
-      <button
-        className="h-5 w-5 flex items-center justify-center"
-        // Toggling the theme between light and dark
-        onClick={() =>
-          changeCurrentTheme(currentTheme === "light" ? "dark" : "light")
-        }
-      >
-        {/* Displaying the appropriate icon based on the current theme */}
-        {currentTheme === "light" ? (
-          <FaSun className="h-full w-auto" /> // Sun icon for light theme
-        ) : (
-          <FaMoon className="text-white h-4 w-auto" /> // Moon icon for dark theme
-        )}
-      </button>
-    </>
+    <button
+      aria-label={`Switch to ${currentTheme === "light" ? "dark" : "light"} mode`}
+      className="flex items-center justify-center p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+      onClick={() =>
+        changeCurrentTheme(currentTheme === "light" ? "dark" : "light")
+      }
+    >
+      {/* Displaying the appropriate icon based on the current theme */}
+      {currentTheme === "light" ? (
+        <FaSun className="text-yellow-600 dark:text-yellow-400 h-5 w-5" />
+      ) : (
+        <FaMoon className="text-gray-400 dark:text-gray-200 h-5 w-5" />
+      )}
+    </button>
   );
 };
 

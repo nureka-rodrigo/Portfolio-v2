@@ -6,14 +6,15 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center transition duration-300"
+      className="min-h-screen flex items-center justify-center transition duration-300 px-4"
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto text-center">
         {/* Animation for the introduction section */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          aria-live="polite"
         >
           {/* Introductory text */}
           <p className="text-lg text-yellow-600 dark:text-yellow-500 mb-2 transition duration-300">
@@ -33,6 +34,7 @@ const Home = () => {
               cursor={true}
               repeat={Infinity}
               style={{ display: "inline-block" }}
+              aria-label="Nureka Rodrigo, a Passionate Developer"
             />
           </h1>
 
@@ -47,6 +49,7 @@ const Home = () => {
               smooth={true}
               duration={500}
               className="text-yellow-600 dark:text-yellow-500 hover:underline cursor-pointer transition duration-300"
+              aria-label="Learn more about me"
             >
               Learn more
             </ScrollLink>

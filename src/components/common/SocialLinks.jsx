@@ -15,20 +15,22 @@ const SocialLinks = () => {
       {SocialLinksData.map((link) => {
         // Dynamically selecting the appropriate icon component
         const IconComponent = iconComponents[link.icon];
+
         return (
           <a
-            key={link.label} // Unique key for each link
-            href={link.href} // URL for the social link
-            target="_blank" // Opens the link in a new tab
-            rel="noopener noreferrer" // Prevents security risks
+            key={link.label}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Follow me on ${link.label}`}
             className="text-neutral-900 dark:text-gray-100 hover:text-yellow-500 dark:hover:text-yellow-600 transition duration-300"
           >
-            <IconComponent size={30} /> {/* Render the appropriate icon */}
+            <IconComponent size={30} />
           </a>
         );
       })}
       {/* Vertical line at the bottom of the links */}
-      <div className="w-px bg-gray-500 dark:bg-gray-300 h-24 mx-auto transition duration-300"></div>
+      <div className="w-px bg-gray-500 dark:bg-gray-300 h-24 mx-auto transition duration-300" />
     </div>
   );
 };

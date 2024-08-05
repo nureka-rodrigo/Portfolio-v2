@@ -9,9 +9,9 @@ const ScrollToTopButton = () => {
     // Function to toggle the visibility of the button based on scroll position
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setVisible(true); // Show button when scrolled more than 300px
+        setVisible(true);
       } else {
-        setVisible(false); // Hide button when scrolled less than 300px
+        setVisible(false);
       }
     };
 
@@ -25,23 +25,24 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling behavior
+      behavior: "smooth",
     });
   };
 
   return (
-    <div>
+    <>
       {visible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-12 right-8 xl:right-20 bg-yellow-600 dark:bg-yellow-500 text-white p-2 rounded-full shadow-lg hover:bg-yellow-700 dark:hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 dark:focus:ring-yellow-500"
+          aria-label="Scroll to top"
+          className="fixed bottom-10 right-8 xl:right-16 bg-yellow-600 dark:bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-700 dark:hover:bg-yellow-600 focus:outline-none transition-colors duration-300"
         >
           <div className="animate-bounce">
-            <MdOutlineKeyboardArrowUp className="size-7" />
+            <MdOutlineKeyboardArrowUp className="text-2xl" />
           </div>
         </button>
       )}
-    </div>
+    </>
   );
 };
 

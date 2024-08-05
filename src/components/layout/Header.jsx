@@ -34,7 +34,7 @@ const Header = () => {
                   currentTheme === "dark" ? "filter invert" : ""
                 }`}
                 src="/logo.svg"
-                alt="Brand"
+                alt="Brand Logo"
               />
             </ScrollLink>
           </div>
@@ -42,11 +42,12 @@ const Header = () => {
             {/* Button to open the mobile menu */}
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              aria-label="Open menu"
+              className="inline-flex items-center justify-center p-2.5 rounded-md text-gray-700 dark:text-gray-100"
               onClick={() => setMobileMenuOpen(true)}
             >
               <IoMenu
-                className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"
+                className="h-6 w-6 transition duration-300"
                 aria-hidden="true"
               />
             </button>
@@ -55,22 +56,20 @@ const Header = () => {
             {/* Navigation items for desktop view */}
             {NavItemsData.map((navItem, index) =>
               navItem.link.startsWith("http") ? (
-                // External link
                 <Link
                   key={index}
                   to={navItem.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600 ${
+                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
                     navItem.text === "Resume"
                       ? "text-yellow-600 dark:text-yellow-500"
-                      : ""
+                      : "text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
                   }`}
                 >
                   {navItem.text}
                 </Link>
               ) : (
-                // Internal link
                 <ScrollLink
                   key={index}
                   to={navItem.link}
@@ -85,7 +84,7 @@ const Header = () => {
           </div>
           <div className="pl-6 pr-2 hidden lg:block">
             {/* Theme toggle button for desktop view */}
-            <ThemeButton/>
+            <ThemeButton />
           </div>
         </div>
       </nav>
@@ -93,10 +92,10 @@ const Header = () => {
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden fixed inset-y-0 right-0 z-10 w-full overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-            initial={{x: "100%"}}
-            animate={{x: 0}}
-            exit={{x: "100%"}}
-            transition={{duration: 0.3}}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3 }}
           >
             <div className="px-6 py-6 h-full bg-gray-100 dark:bg-neutral-950 transition duration-300">
               <div className="flex items-center justify-between">
@@ -112,47 +111,46 @@ const Header = () => {
                       currentTheme === "dark" ? "filter invert" : ""
                     }`}
                     src="/logo.svg"
-                    alt="Brand"
+                    alt="Brand Logo"
                   />
                 </ScrollLink>
                 {/* Button to close the mobile menu */}
                 <button
                   type="button"
-                  className="rounded-md text-gray-700"
+                  aria-label="Close menu"
+                  className="rounded-md text-gray-700 dark:text-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <IoMdClose className="h-6 w-6 text-neutral-950 dark:text-gray-100 transition duration-300"/>
+                  <IoMdClose className="h-6 w-6 transition duration-300"/>
                 </button>
               </div>
               <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500">
+                <div className="-my-6 divide-y divide-gray-500 dark:divide-gray-700">
                   <div className="space-y-2 py-6">
                     {/* Navigation items for mobile view */}
                     {NavItemsData.map((navItem, index) =>
                       navItem.link.startsWith("http") ? (
-                        // External link
                         <Link
                           key={index}
                           to={navItem.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer ${
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 ${
                             navItem.text === "Resume"
                               ? "text-yellow-600 dark:text-yellow-500"
-                              : "text-gray-900 dark:text-gray-300"
-                          } hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500`}
+                              : "text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500"
+                          }`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {navItem.text}
                         </Link>
                       ) : (
-                        // Internal link
                         <ScrollLink
                           key={index}
                           to={navItem.link}
                           smooth={true}
                           duration={500}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 cursor-pointer text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500"
+                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 hover:bg-gray-200 dark:hover:bg-neutral-900 text-gray-900 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-500"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {navItem.text}
