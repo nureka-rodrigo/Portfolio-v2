@@ -24,12 +24,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-950 transition duration-300">
       {/* Header component */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <Header />
       </Suspense>
 
       <div className="container pb-10 max-w-7xl mx-auto px-4">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense>
           <section
             id="home"
             ref={homeRef}
@@ -69,22 +69,22 @@ function App() {
       </div>
 
       {/* Footer component */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <Footer />
       </Suspense>
 
       {/* Social links component */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <SocialLinks />
       </Suspense>
 
       {/* Email section component */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <EmailSection />
       </Suspense>
 
       {/* Scroll to top button component */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <ScrollToTopButton />
       </Suspense>
     </div>
