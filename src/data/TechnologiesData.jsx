@@ -22,13 +22,14 @@ import {
   SiDjango,
   SiFigma,
   SiFirebase,
+  SiGraphql,
   SiKotlin,
+  SiLatex,
   SiMicrosoftsqlserver,
   SiMysql,
   SiSpring,
   SiTailwindcss,
   SiVite,
-  SiGraphql, // Import GraphQL icon
 } from "react-icons/si";
 
 export const TechnologiesData = [
@@ -42,6 +43,7 @@ export const TechnologiesData = [
   { name: "Python", icon: <FaPython /> },
   { name: "Kotlin", icon: <SiKotlin /> },
   { name: "Markdown", icon: <FaMarkdown /> },
+  { name: "LaTeX", icon: <SiLatex /> },
 
   // Frameworks
   { name: "Bootstrap", icon: <FaBootstrap /> },
