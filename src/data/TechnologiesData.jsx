@@ -44,6 +44,7 @@ export const TechnologiesData = [
   { name: "Kotlin", icon: <SiKotlin /> },
   { name: "Markdown", icon: <FaMarkdown /> },
   { name: "LaTeX", icon: <SiLatex /> },
+  { name: "GraphQL", icon: <SiGraphql /> },
 
   // Frameworks
   { name: "Bootstrap", icon: <FaBootstrap /> },
@@ -57,7 +58,6 @@ export const TechnologiesData = [
   // Tools
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Composer", icon: <SiComposer /> },
-  { name: "GraphQL", icon: <SiGraphql /> },
 
   // Databases
   { name: "MySQL", icon: <SiMysql /> },
