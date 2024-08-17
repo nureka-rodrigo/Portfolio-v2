@@ -16,6 +16,9 @@ import {
   FaWindows,
 } from "react-icons/fa";
 import {
+  DiProlog
+} from "react-icons/di";
+import {
   SiC,
   SiCanva,
   SiComposer,
@@ -44,6 +47,7 @@ export const TechnologiesData = [
   { name: "Kotlin", icon: <SiKotlin /> },
   { name: "Markdown", icon: <FaMarkdown /> },
   { name: "LaTeX", icon: <SiLatex /> },
+  { name: "Prolog", icon: <DiProlog /> },
   { name: "GraphQL", icon: <SiGraphql /> },
 
   // Frameworks
