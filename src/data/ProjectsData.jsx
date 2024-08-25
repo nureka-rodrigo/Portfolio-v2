@@ -1,8 +1,15 @@
 export const ProjectsData = [
   {
+    title: "Crypt-It",
+    description: "A dynamic web application designed to make cryptographic operations accessible and intuitive for everyone. Whether you're looking to encrypt messages with ciphers like Caesar, Vigenère, or AES, or explore hashing algorithms like SHA-256, Crypt-It has you covered.",
+    tags: ["ReactJS", "Vite", "Tailwind CSS", "shadcn/ui", "Web Crypto API"],
+    year: "2024",
+    github: "https://github.com/nureka-rodrigo/Crypt-It",
+    live: "https://nureka-rodrigo.github.io/Crypt-It/",
+  },
+  {
     title: "Portfolio-v2",
-    description:
-      "A single-page personal portfolio website developed using React.js. It showcases the user's skills, experience, and projects.",
+    description: "A single-page personal portfolio website developed using React.js. It showcases the user's skills, experience, and projects.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2024",
     github: "https://github.com/nureka-rodrigo/Portfolio-v2",
@@ -10,8 +17,7 @@ export const ProjectsData = [
   },
   {
     title: "Wildlife-Circle USJP",
-    description:
-      "A dynamic web application developed for the Wildlife Circle at the University of Sri Jayewardenepura. Wildlife Circle offers a comprehensive platform with features that enhance user experience and provide robust administrative tools.",
+    description: "A dynamic web application developed for the Wildlife Circle at the University of Sri Jayewardenepura. Wildlife Circle offers a comprehensive platform with features that enhance user experience and provide robust administrative tools.",
     tags: ["ReactJS", "Vite", "Tailwind CSS", "Laravel", "MySQL"],
     year: "2024",
     github: null,
@@ -19,8 +25,7 @@ export const ProjectsData = [
   },
   {
     title: "ColorGen",
-    description:
-      "A dynamic web application built with React and utilizes the Vite build tool. The application allows users to generate a custom color palette based on a chosen base color. Users can interact with the application to generate new colors, copy colors to the clipboard, and view various components styled with the generated colors.",
+    description: "A dynamic web application that allows users to generate a custom color palette based on a chosen base color. Users can interact with the application to generate new colors, copy colors to the clipboard, and view various components styled with the generated colors.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2024",
     github: "https://github.com/nureka-rodrigo/Portfolio-v1",
@@ -37,8 +42,7 @@ export const ProjectsData = [
   },
   {
     title: "Weather-X Web",
-    description:
-      "A sleek and innovative web application designed to keep you informed about the weather. Crafted with Vite for speedy performance, React for dynamic functionality, TailwindCSS for modern styling, and Flowbite for seamless UI components, this project redefines how you interact with weather data. Experience real-time updates based on your geolocation, with themes that adapt to your preferences. Stay ahead of the forecast with Weather-X.",
+    description: "A sleek and innovative web application designed to keep you informed about the weather. Crafted with Vite for speedy performance, React for dynamic functionality, TailwindCSS for modern styling, and Flowbite for seamless UI components, this project redefines how you interact with weather data. Experience real-time updates based on your geolocation, with themes that adapt to your preferences. Stay ahead of the forecast with Weather-X.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/Weather-X",
@@ -46,8 +50,7 @@ export const ProjectsData = [
   },
   {
     title: "Weather-X Mobile",
-    description:
-      "An intuitive mobile application designed to keep you informed about the weather on the go. Developed using Kotlin, Weather-X Mobile brings you accurate and up-to-date weather forecasts right at your fingertips. Experience real-time updates based on your geolocation, ensuring you're always prepared for whatever weather comes your way. Stay ahead of the forecast wherever you are.",
+    description: "An intuitive mobile application designed to keep you informed about the weather on the go. Developed using Kotlin, Weather-X Mobile brings you accurate and up-to-date weather forecasts right at your fingertips. Experience real-time updates based on your geolocation, ensuring you're always prepared for whatever weather comes your way. Stay ahead of the forecast wherever you are.",
     tags: ["Android", "Kotlin", "Volley"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/Kotlin-Weather-App",
@@ -55,8 +58,7 @@ export const ProjectsData = [
   },
   {
     title: "Portfolio-v1",
-    description:
-      "A multi-page personal portfolio website developed using React.js. It showcases the user's skills, experience, education, and projects. The website also includes a contact form for visitors to send messages.",
+    description: "A multi-page personal portfolio website developed using React.js. It showcases the user's skills, experience, education, and projects. The website also includes a contact form for visitors to send messages.",
     tags: ["ReactJS", "Vite", "Tailwind CSS"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/Portfolio-v1",
@@ -64,8 +66,7 @@ export const ProjectsData = [
   },
   {
     title: "ABC University",
-    description:
-      "A modern student management system that allows students to view their profile, update their profile and password, register for courses, and provide feedback.",
+    description: "A modern student management system that allows students to view their profile, update their profile and password, register for courses, and provide feedback.",
     tags: ["ReactJS", "Tailwind CSS", "Python", "Django"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/abc-university-frontend",
@@ -73,8 +74,7 @@ export const ProjectsData = [
   },
   {
     title: "SLRMS",
-    description:
-      "A comprehensive Railway Management System developed for Sri Lanka Railways. This system streamlines various operations including ticket booking, scheduling, and managing train routes. SLRMS offers a user-friendly interface and robust backend to ensure efficient management and smooth operation of railway services.",
+    description: "A comprehensive Railway Management System developed for Sri Lanka Railways. This system streamlines various operations including ticket booking, scheduling, and managing train routes. SLRMS offers a user-friendly interface and robust backend to ensure efficient management and smooth operation of railway services.",
     tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
     year: "2023",
     github: "https://github.com/nureka-rodrigo/SLRMS",
