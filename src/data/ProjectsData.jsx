@@ -5,7 +5,7 @@ export const ProjectsData = [
     tags: ["ReactJS", "Vite", "Tailwind CSS", "shadcn/ui", "Web Crypto API"],
     year: "2024",
     github: "https://github.com/nureka-rodrigo/Crypt-It",
-    live: "https://nureka-rodrigo.github.io/Crypt-It/",
+    live: "https://crypt-it.netlify.app/",
   },
   {
     title: "Portfolio-v2",
