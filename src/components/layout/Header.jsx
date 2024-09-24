@@ -9,7 +9,6 @@ import { ThemeContext } from "../../providers/ThemeProvider.jsx";
 import { NavItemsData } from "../../data/NavItemsData.jsx";
 
 const Header = () => {
-  // State to manage the visibility of the mobile menu
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { currentTheme } = useContext(ThemeContext);
 
@@ -22,7 +21,6 @@ const Header = () => {
       <nav className="backdrop-blur-lg dark:backdrop-blur-lg">
         <div className="mx-auto flex max-w-7xl items-center justify-between p-3 gap-x-8 ">
           <div className="flex lg:flex-1">
-            {/* Scroll to the 'home' section when clicking the logo */}
             <ScrollLink
               to="home"
               smooth={true}
@@ -39,7 +37,6 @@ const Header = () => {
             </ScrollLink>
           </div>
           <div className="flex lg:hidden">
-            {/* Button to open the mobile menu */}
             <button
               type="button"
               aria-label="Open menu"
@@ -53,9 +50,21 @@ const Header = () => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {/* Navigation items for desktop view */}
             {NavItemsData.map((navItem, index) =>
-              navItem.link.startsWith("http") ? (
+              navItem.download ? (
+                <a
+                  key={index}
+                  href={navItem.link}
+                  download
+                  className={`text-sm font-semibold leading-6 transition duration-300 cursor-pointer ${
+                    navItem.text === "Resume"
+                      ? "text-yellow-600 dark:text-yellow-500"
+                      : "text-gray-900 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-600"
+                  }`}
+                >
+                  {navItem.text}
+                </a>
+              ) : navItem.link.startsWith("http") ? (
                 <Link
                   key={index}
                   to={navItem.link}
@@ -83,7 +92,6 @@ const Header = () => {
             )}
           </div>
           <div className="pl-6 pr-2 hidden lg:block">
-            {/* Theme toggle button for desktop view */}
             <ThemeButton />
           </div>
         </div>
@@ -99,7 +107,6 @@ const Header = () => {
           >
             <div className="px-6 py-6 h-full bg-gray-100 dark:bg-neutral-950 transition duration-300">
               <div className="flex items-center justify-between">
-                {/* Scroll to the 'home' section when clicking the logo in mobile view */}
                 <ScrollLink
                   to="home"
                   smooth={true}
@@ -114,22 +121,34 @@ const Header = () => {
                     alt="Brand Logo"
                   />
                 </ScrollLink>
-                {/* Button to close the mobile menu */}
                 <button
                   type="button"
                   aria-label="Close menu"
                   className="rounded-md text-gray-700 dark:text-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <IoMdClose className="h-6 w-6 transition duration-300"/>
+                  <IoMdClose className="h-6 w-6 transition duration-300" />
                 </button>
               </div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500 dark:divide-gray-700">
                   <div className="space-y-2 py-6">
-                    {/* Navigation items for mobile view */}
                     {NavItemsData.map((navItem, index) =>
-                      navItem.link.startsWith("http") ? (
+                      navItem.download ? (
+                        <a
+                          key={index}
+                          href={navItem.link}
+                          download
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition duration-300 ${
+                            navItem.text === "Resume"
+                              ? "text-yellow-600 dark:text-yellow-500"
+                              : "text-gray-900 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-900 hover:text-yellow-600 dark:hover:text-yellow-500"
+                          }`}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {navItem.text}
+                        </a>
+                      ) : navItem.link.startsWith("http") ? (
                         <Link
                           key={index}
                           to={navItem.link}
@@ -158,7 +177,6 @@ const Header = () => {
                       )
                     )}
                   </div>
-                  {/* Theme toggle button for mobile view */}
                   <div className="flex items-center justify-center py-5">
                     <ThemeButton />
                   </div>

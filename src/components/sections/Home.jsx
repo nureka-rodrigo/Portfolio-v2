@@ -4,10 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Home = () => {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center transition duration-300 px-4"
-    >
+    <section className="min-h-screen flex items-center justify-center transition duration-300 px-4">
       <div className="container mx-auto text-center">
         {/* Animation for the introduction section */}
         <motion.div
@@ -40,10 +37,10 @@ const Home = () => {
 
           {/* Description and link to the 'about' section */}
           <p className="text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto transition duration-300">
-            I am a web developer from Sri Lanka with a strong foundation in
-            both front-end and back-end development. I&apos;m skilled in
-            creating user-friendly, responsive, and functional web applications
-            using React and its ecosystem.{" "}
+            I am a web developer from Sri Lanka with a strong foundation in both
+            front-end and back-end development. I&apos;m skilled in creating
+            user-friendly, responsive, and functional web applications using
+            React and its ecosystem.{" "}
             <ScrollLink
               to="about"
               smooth={true}

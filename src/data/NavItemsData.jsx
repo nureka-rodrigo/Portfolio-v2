@@ -21,6 +21,7 @@ export const NavItemsData = [
   },
   {
     text: "Resume",
-    link: "https://flowcv.com/resume/ic2he0lik0",
+    link: "/Resume_Nureka_Rodrigo.pdf",
+    download: true,
   },
 ];
